@@ -14,13 +14,12 @@ import {
 import {
   Home,
   Users,
-  Car,
-  Calculator,
+  Briefcase,
   Search,
   Plus,
-  ChartNoAxesCombined,
   User,
   SquareUserRound,
+  FileText,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,14 +39,6 @@ export function AppSidebar() {
           <SidebarHeader className="px-6 py-6 border-b border-neutral-800">
             <Link href="/home" className="flex items-center gap-3">
               <Logo />
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  Euro 65 Motors
-                </p>
-                <p className="text-xs text-neutral-400">
-                  Dealer Management System
-                </p>
-              </div>
             </Link>
           </SidebarHeader>
 
@@ -56,13 +47,13 @@ export function AppSidebar() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500" />
               <Input
-                placeholder="Search dealers, cars…"
+                placeholder="Search talents, recruiters…"
                 className="pl-9 bg-neutral-900 border-neutral-800 text-sm"
               />
             </div>
             <Dialog>
               <DialogTrigger className="w-full">
-                <Button variant="accent" size="sm" className="w-full gap-2">
+                <Button variant="accent" size="sm" className="w-full  ">
                   <Plus className="h-4 w-4" />
                   Add New Record
                 </Button>
@@ -74,7 +65,7 @@ export function AppSidebar() {
           </div>
 
           {/* Navigation */}
-          <div className="px-4 py-4 space-y-">
+          <div className="px-4 py-4 space-y-1">
             {/* Overview */}
             <SidebarGroup>
               <SidebarGroupLabel className="px-2 text-xs font-medium text-neutral-500">
@@ -87,35 +78,43 @@ export function AppSidebar() {
               </SidebarGroupContent>
             </SidebarGroup>
 
-            {/* Management */}
+            {/* Talent Management */}
             <SidebarGroup>
               <SidebarGroupLabel className="px-2 text-xs font-medium text-neutral-500">
-                Management
+                Talent Management
               </SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
                   <NavItem
-                    href="/category/dealers"
+                    href="/category/recruiters"
                     icon={Users}
-                    label="Dealers"
+                    label="Recruiters"
                   />
-                  <NavItem href="/category/boys" icon={User} label="Boys" />
-                  <NavItem href="/vehicles" icon={Car} label="Vehicles" />
+                  <NavItem
+                    href="/category/talents"
+                    icon={User}
+                    label="Talents"
+                  />
+                  <NavItem
+                    href="/category/jobs"
+                    icon={Briefcase}
+                    label="Job Postings"
+                  />
                 </SidebarMenu>
               </SidebarGroupContent>
             </SidebarGroup>
 
-            {/* Finance */}
+            {/* Administration */}
             <SidebarGroup>
               <SidebarGroupLabel className="px-2 text-xs font-medium text-neutral-500">
-                Finance
+                Administration
               </SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
                   <NavItem
-                    href="/category/accountant"
-                    icon={Calculator}
-                    label="Accountants"
+                    href="/category/requests"
+                    icon={FileText}
+                    label="Requests"
                   />
                   <NavItem
                     href="/category/admin"
@@ -139,8 +138,8 @@ export function AppSidebar() {
               className="rounded-md"
             />
             <div className="leading-tight">
-              <p className="text-sm font-medium text-white">Shadcn</p>
-              <p className="text-xs text-neutral-500">m@example.com</p>
+              <p className="text-sm font-medium text-white">Admin User</p>
+              <p className="text-xs text-neutral-500">admin@bccastings.com</p>
             </div>
           </div>
         </div>
@@ -178,10 +177,10 @@ function NavItem({
         "
       >
         <Link href={href} className="flex items-center gap-3">
-          {/* Active indicator slot (future-ready) */}
-          <span className="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 bg-transparent group-data-[active=true]:bg-[#26ba81]" />
+          {/* Active indicator */}
+          <span className="absolute left-0 top-1/2 h-4 w-0.5 -translate-y-1/2 bg-transparent group-data-[active=true]:bg-[#D4AF37]" />
 
-          <Icon className="h-4 w-4 text-neutral-400 group-hover:text-white" />
+          <Icon className="h-4 w-4 text-neutral-400 group-hover:text-[#E6C76A]" />
           <span>{label}</span>
         </Link>
       </SidebarMenuButton>

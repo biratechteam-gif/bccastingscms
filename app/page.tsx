@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center  px-4">
+    <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md rounded-xl border border-neutral-800 bg-neutral-950/70 backdrop-blur-xl shadow-xl p-8 space-y-8">
         {/* Brand */}
         <div className="flex flex-col items-center space-y-4">
@@ -13,10 +13,10 @@ export default function Home() {
 
           <div className="text-center space-y-1">
             <h1 className="text-2xl font-semibold text-white tracking-tight">
-              Euro 65 Motors
+              BC Castings CMS
             </h1>
             <p className="text-sm text-neutral-400">
-              Dealer & Vehicle Management Portal
+              Talent &amp; Recruiter Management Portal
             </p>
           </div>
         </div>
@@ -40,7 +40,11 @@ export default function Home() {
             <Input type="email" placeholder="Email address" />
 
             <Link href={"/home"}>
-              <Button variant="accent" size="lg" className="w-full">
+              <Button
+                variant="accent"
+                size="lg"
+                className="w-full bg-[#B8962E] hover:bg-[#D4AF37] text-black font-semibold transition-colors"
+              >
                 Continue
               </Button>
             </Link>
@@ -54,7 +58,7 @@ export default function Home() {
           </p>
 
           <p className="text-[11px] text-neutral-600">
-            © {new Date().getFullYear()} Euro 65 Motors
+            © {new Date().getFullYear()} BC Castings CMS
           </p>
         </div>
       </div>
